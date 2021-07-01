@@ -14,8 +14,8 @@ dependencies:
   dio: ^4.0.0-prev3                  #网络请求
   fluttertoast: ^8.0.6        #toast
   equatable: ^2.0.0 #增强组件相等性判断
-#  flutter_easyrefresh: ^2.1.1   #下拉刷新加列表
-#  pull_to_refresh: ^2.0.0   #下拉刷新加列表
+  #  flutter_easyrefresh: ^2.1.1   #下拉刷新加列表
+  #  pull_to_refresh: ^2.0.0   #下拉刷新加列表
   flutter_spinkit: ^5.0.0          #等待的图标
   flutter_swiper_null_safety: ^1.0.2           #左右滑动page
   flutter_screenutil: ^5.0.0+2           #宽高限定
@@ -31,7 +31,9 @@ dependencies:
   animations: ^2.0.0    #动画相关的
   animated_text_kit: ^4.2.1   #文字跳动的动画
   fl_chart: ^0.36.0         #图表控件
-  worker_manager: ^4.0.3    #线程管理
-
+#  worker_manager: ^4.1.1    #线程管理
+  video_player: ^2.1.6          #视频播放器
+  url_launcher: ^6.0.8  #打开url
+  flutter_weather_bg_null_safety: ^1.0.0 #天气动态背景
 flutter:
   uses-material-design: true
