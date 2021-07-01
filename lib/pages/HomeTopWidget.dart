@@ -18,12 +18,12 @@ class _HomeTopWidgetState extends State<HomeTopWidget> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-        'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4')
+        'http://www.ogawaworld.net.cn/upfiles/onepage/202005/1590133794079.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
-    Future.delayed(Duration(seconds: 1),(){
+    Future.delayed(Duration(seconds: 5),(){
       _controller!.play();
     });
   }
