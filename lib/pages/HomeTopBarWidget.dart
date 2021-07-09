@@ -28,7 +28,7 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
                     height: 40.0.hDp,
                     width: 40.0.hDp,
                     child: ImageLoadUtils(
-                      url:"https://www.baidu.com/img/flexible/logo/pc/result.png",
+                      url:"https://img11.360buyimg.com/ddimg/jfs/t1/173445/21/15206/1609537/60caebaaE18d21c8d/757aea972636a1b8.png",
                       radius: 90,
                     ),
                   ),
@@ -36,7 +36,7 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
                     width: 10.0.wDp,
                   ),
                   SimpleText(
-                    "Flutter Web",
+                    "NESTS Blog",
                     fontSize: 25.sp,
                     color: Colors.white,
                   ),
