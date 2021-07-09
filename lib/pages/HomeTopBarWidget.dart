@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_my_web/widget/BlueMaterialButton.dart';
 import 'package:flutter_my_web/widget/ImageWidget.dart';
 import 'package:flutter_my_web/widget/TextWidget.dart';
 import 'package:flutter_my_web/utils/DpUtils.dart';
@@ -17,7 +18,7 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
       child: Container(
         padding: EdgeInsets.only(left: 60.0.wDp, right: 60.0.wDp),
         height: 60.0.hDp,
-        color: Color(0xcc42b983),
+        // color: Color(0xcc42b983),
         child: Center(
           child: Row(
             children: [
@@ -27,8 +28,7 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
                     height: 40.0.hDp,
                     width: 40.0.hDp,
                     child: ImageLoadUtils(
-                      url:
-                          "https://www.baidu.com/img/flexible/logo/pc/result.png",
+                      url:"https://www.baidu.com/img/flexible/logo/pc/result.png",
                       radius: 90,
                     ),
                   ),
@@ -43,7 +43,8 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
                 ],
               ),
               Expanded(
-                  child: Row(
+                  child:  Container()),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _TopCenterIconWidget(_TopCenterIconBean("首页",Icons.home)),
@@ -51,11 +52,34 @@ class _HomeTopBarWidgetState extends State<HomeTopBarWidget> {
                   _TopCenterIconWidget(_TopCenterIconBean("分类",Icons.fence)),
                   _TopCenterIconWidget(_TopCenterIconBean("关于",Icons.app_blocking_outlined)),
                   Container(
-                    width: 100.0.wDp,
-                    child: TextField(),
+                    width: 200.0.wDp,
+                    height: 40.0.hDp,
+                    child: TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12.sp,
+                      ),
+                      textAlign: TextAlign.center ,//文本对齐方式
+                      autofocus: false, //是否自动获取焦点
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: '输入查找的内容',
+                        // labelText: '请输入',
+                        prefixIcon: Icon(Icons.search),
+                        labelStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10.sp,
+                        ),
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10.sp,
+                        )
+                      ),
+                    ),
                   ),
                 ],
-              )),
+              ),
+              Container(width: 20.0.wDp,),
               _WeatherWidget(),
             ],
           ),
@@ -119,6 +143,7 @@ class __WeatherWidgetState extends State<_WeatherWidget> {
       SimpleText("27°",color: Colors.white,),Container(width: 5.0.wDp,),
       SimpleText("厦门",color: Colors.white,),Container(width: 5.0.wDp,),
       SimpleText("天晴",color: Colors.white,),Container(width: 5.0.wDp,),
+      BlueMaterialButton("更换天气",(){})
     ],);
   }
 }
