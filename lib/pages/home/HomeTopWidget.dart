@@ -1,15 +1,10 @@
-import 'dart:html';
-
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_my_web/utils/DpUtils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_my_web/widget/CardRadiusWidget.dart';
-import 'package:flutter_my_web/widget/ImageWidget.dart';
 import 'package:flutter_my_web/widget/TextWidget.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
-import 'package:flutter_weather_bg_null_safety/bg/weather_bg.dart';
-import 'package:flutter_weather_bg_null_safety/utils/weather_type.dart';
 import 'package:video_player/video_player.dart';
 
 class HomeTopWidget extends StatefulWidget {

@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_my_web/logic/HomeGetLogic.dart';
-import 'package:flutter_my_web/pages/HomeTopBarWidget.dart';
-import 'package:flutter_my_web/pages/HomeTopWidget.dart';
-import 'package:flutter_weather_bg_null_safety/bg/weather_bg.dart';
-import 'package:flutter_weather_bg_null_safety/utils/weather_type.dart';
+import 'package:flutter_my_web/pages/home/HomeTopBarWidget.dart';
+import 'package:flutter_my_web/pages/home/HomeTopWidget.dart';
 import 'package:get/get.dart';
+import 'package:flutter_my_web/utils/DpUtils.dart';
 
+import 'HomeListItemView.dart';
 
 class HomePage extends StatefulWidget {
   final HomeGetLogic _homeGetLogic = Get.put(HomeGetLogic());
@@ -31,8 +31,16 @@ class _HomePageState extends State<HomePage> {
               children: [
                 HomeTopWidget(),
                 Container(
-                  height: 300,
-                  color: Colors.transparent,
+                  height: 20.0.hDp,
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 300.0.wDp, right: 300.0.wDp),
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return HomeListItemView(HomeListItemBean());
+                      }),
                 ),
               ],
             ),
