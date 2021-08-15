@@ -1,6 +1,6 @@
 {
-    "name": "flutter_my_web",
-    "short_name": "flutter_my_web",
+    "name": "flutterdemo",
+    "short_name": "flutterdemo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
